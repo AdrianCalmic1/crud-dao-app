@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import pixel.academy.crud_app.entity.Student;
 
 @Repository
-public class StudentDAOImplementation {
+public class StudentDAOImplementation  implements StudentDAO {
     //Camp pentru EntityManager (va fi utilizat pentru interactiune cu baza de date)
     private EntityManager entityManager;
 
@@ -19,6 +19,7 @@ public class StudentDAOImplementation {
 
     }
     //Implementarea metodei save pentru salvarea unui obiect
+
     @Override
     @Transactional
     public void save(Student theStudent){
